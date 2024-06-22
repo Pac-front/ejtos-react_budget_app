@@ -25,7 +25,7 @@ const App = () => {
                         <ExpenseTotal />
                     </div>
                      <div className='col-sm'>
-                        <ChangeCurrency />
+                        <ChangeCurrency  />
                     </div>
                 </div>
                 <h3 className='mt-3'>Allocation</h3>

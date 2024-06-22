@@ -8,17 +8,23 @@ const Currency = () => {
        
    // }
     return (
-<div className='alert alert-secondary'>
+<div className='alert alert-secondary'  style={{
+    background: "green",
+    color: "white"
+ }}>
 <span>{currency}</span>
- <select className="custom-select" id="inputGroupSelect01" onChange={(event) => setNewCurrency(event.target.value)}>
+ <select className="custom-select" id="inputGroupSelect01" style={{background: "green"}}  onChange={(event) => setNewCurrency(event.target.value)}>
                         <option defaultValue>Currency..{newCurrency}</option>
-                        <option value="dollar" name="currency">$</option>
-                <option value="pound" name="currency">&#163;</option>
-                <option value="euro" name="currency">&#8364;</option>
-                <option value="ruppee" name="currency">&#8377;</option>
+                        <option value="dollar" className="currency">$ Dollar</option>
+                <option value="pound" className="currency">&#163; Pound</option>
+                <option value="euro" className="currency">&#8364; Euro</option>
+                <option value="ruppee" className="currency">&#8377; Ruppee</option>
                   </select>
 </div>
     );
 };
 export default Currency;
+
+   
+
 
