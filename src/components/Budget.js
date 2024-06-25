@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
-
+import { currencySymbol  } from './ChangeCurrency';
 const Budget = () => {
-    const { budget, currency } = useContext(AppContext);
-    const [newCurrency, setNewCurrency] = useState(currency)
+    const { budget } = useContext(AppContext);
+
+   // const [newCurrency, setNewCurrency] = useState()
     const [newBudget, setNewBudget] = useState(budget);
     const handleBudgetChange = (event) => {
         if(event.target.value > budget) {
@@ -12,9 +13,12 @@ const Budget = () => {
         }
         setNewBudget(event.target.value);
     }
+
+
+
     return (
 <div className='alert alert-secondary'>
-<span>Budget: {currency} {budget}</span>
+<span>Budget: {currencySymbol} {budget}</span>
 <input type="number" step="10" value={newBudget} onChange={handleBudgetChange}></input>
 </div>
     );

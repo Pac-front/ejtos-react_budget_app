@@ -1,9 +1,14 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 
-const Currency = () => {
+export  let currencySymbol = "£";
+
+export const Currency = () => {
     const { currency, dispatch } = useContext(AppContext);
     const [newCurrency, setNewCurrency] = useState(currency);
+   
+  
+
     const changeCurrency = (event) => {
        
         dispatch({
@@ -12,9 +17,8 @@ const Currency = () => {
         });
         
     }
-
-    let currencySymbol = "£"
-    if(newCurrency === "pound") {
+    
+if(newCurrency === "pound") {
         currencySymbol = "£"
     } else if(newCurrency === "dollar") {
         currencySymbol = "$"
@@ -23,8 +27,10 @@ const Currency = () => {
     } else if(newCurrency === "ruppee") {
         currencySymbol = "₹"
     }
+ 
     
     return (
+
 <div className='alert alert-secondary'  style={{
     background: "green",
     color: "white"
@@ -41,7 +47,8 @@ const Currency = () => {
 </div>
     );
 };
-export default Currency;
+export default  Currency;
+
 
   
 
