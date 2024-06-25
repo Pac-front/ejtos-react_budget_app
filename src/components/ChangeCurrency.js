@@ -38,7 +38,7 @@ if(newCurrency === "pound") {
 <span>{currencySymbol} </span>
  <select className="custom-select" id="inputGroupSelect01" style={{background: "green"}}  onChange={(event) => changeCurrency(setNewCurrency(event.target.value))}>
                         <option defaultValue>Currency {currency}  Pound</option>
-                        <option value="dollar" className="currency">$ Dollar</option>
+                        <option value="dollar" className="currency">&#x24; Dollar</option>
                 <option value="pound" className="currency">&#163; Pound</option>
                 <option value="euro" className="currency">&#8364; Euro</option>
                 <option value="ruppee" className="currency">&#8377; Ruppee</option>

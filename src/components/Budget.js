@@ -4,7 +4,6 @@ import { currencySymbol  } from './ChangeCurrency';
 const Budget = () => {
     const { budget } = useContext(AppContext);
 
-   // const [newCurrency, setNewCurrency] = useState()
     const [newBudget, setNewBudget] = useState(budget);
     const handleBudgetChange = (event) => {
         if(event.target.value > budget) {
