@@ -11,7 +11,6 @@ const ExpenseItem = (props) => {
             payload: props.id,
         });
     };
-
     const increaseAllocation = (name) => {
         const expense = {
             name: name,
@@ -68,6 +67,7 @@ const ExpenseItem = (props) => {
         </tr>
     );
 };
+
 
 
 export default ExpenseItem;
